@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online blog</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="icon" href="https://seeklogo.com/images/B/blogger-blogspot-logo-BA8347BEA2-seeklogo.com.png?v=638253837980000000">
+
+
+
+</head>
+
+<body>
+    <section x-data="{ mobileNavOpen: false }" class="overflow-hidden ">
+        <div class="flex items-center justify-between px-7 xl:px-40 py-5 bg-white">
+            <div class="w-auto">
+                <div class="flex flex-wrap items-center">
+                    <div class="w-auto mr-14">
+                        <a href="#">
+                            <img src="https://seeklogo.com/images/B/blogger-blogspot-logo-BA8347BEA2-seeklogo.com.png?v=638253837980000000"
+                                alt="" class="w-20">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-auto">
+                <div class="flex flex-wrap items-center">
+                    <div class="w-auto hidden lg:block">
+                        <ul class="flex items-center mr-16">
+                            <li class="mr-9 font-medium hover:text-gray-700"><a href="#">NEWS</a></li>
+                            <li class="mr-9 font-medium hover:text-gray-700"><a href="#">SPORTS</a></li>
+                            <li class="mr-9 font-medium hover:text-gray-700"><a href="#">FASHION</a></li>
+                           
+                        </ul>
+                    </div>
+                    <div class="w-auto hidden lg:block">
+                        <div class="inline-block">
+                            <button
+                                class="py-3 px-5 w-full text-white font-semibold rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
+                                type="button">CLICK TO PAY</button>
+                        </div>
+                    </div>
+                    <div class="w-auto lg:hidden">
+                        <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                            <svg class="text-indigo-600" width="51" height="51" viewbox="0 0 56 56" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <rect width="56" height="56" rx="28" fill="currentColor"></rect>
+                                <path d="M37 32H19M37 24H19" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div :class="{'block': mobileNavOpen, 'hidden': !mobileNavOpen}"
+            class="hidden fixed top-0 left-0 bottom-0 w-4/6 sm:max-w-xs z-50">
+            <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-gray-800 opacity-80"></div>
+            <nav class="relative z-10 px-9 pt-8 bg-white h-full overflow-y-auto">
+                <div class="flex flex-wrap justify-between h-full">
+                    <div class="w-full">
+                        <div class="flex items-center justify-between -m-2">
+                            <div class="w-auto p-2">
+                                <a class="inline-block" href="#">
+                                    <img src="flaro-assets/logos/flaro-logo-black.svg" alt="">
+                                </a>
+                            </div>
+                            <div class="w-auto p-2">
+                                <button x-on:click="mobileNavOpen = !mobileNavOpen">
+                                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex flex-col justify-center py-16 w-full">
+                        <ul>
+                            <li class="mb-12"><a class="font-medium hover:text-gray-700" href="#">Features</a></li>
+                            <li class="mb-12"><a class="font-medium hover:text-gray-700" href="#">Solutions</a></li>
+                            <li class="mb-12"><a class="font-medium hover:text-gray-700" href="#">Resources</a></li>
+                            <li><a class="font-medium hover:text-gray-700" href="#">Pricing</a></li>
+                        </ul>
+                    </div>
+                    <div class="flex flex-col justify-end w-full pb-8">
+                        <div class="flex flex-wrap">
+                            <div class="w-full">
+                                <div class="block">
+                                    <button
+                                        class="py-3 px-5 w-full text-white font-semibold rounded-xl focus:ring focus:ring-indigo-300 bg-indigo-600 hover:bg-indigo-700 transition ease-in-out duration-200"
+                                        type="button">Try 14 Days Free Trial</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </section>
+    <section class="py-15 bg-black bg-no-repeat bg-center bg-cover overflow-hidden mb-12" style="background-image: url('https://pressclubswfl.org/wp-content/uploads/2023/08/News.jpg');">
+        <div class="container px-4 mx-auto">
+          <div class=" w-80 h-96 px-5 pt-5 pb-9 md:max-w-xl bg-black bg-opacity-80 rounded-4xl" style="backdrop-filter: blur(10px);">
+            <p class="mb-7 font-sans max-w-max px-3 py-1.5 text-sm text-white font-semibold uppercase">NEWS</p>
+            <h2 class="mb-4 text-5xl md:text-5xl text-white font-bold font-heading tracking-px-n leading-tight">How to handle your good employee for the business.</h2>
+        
+              <svg width="19" height="18" viewbox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 3.75L16.25 9M16.25 9L11 14.25M16.25 9L2.75 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="py-15 bg-black bg-no-repeat bg-center bg-cover overflow-hidden mb-12" style="background-image: url('https://cdn3.parksmedia.wdprapps.disney.com/media/espnwwos/home/WWoS_Hero_768x438_Multi.jpg');">
+        <div class="container px-4 mx-auto">
+          <div class="w-80 h-96 px-5 pt-5 pb-9 md:max-w-xl bg-black bg-opacity-80 rounded-4xl" style="backdrop-filter: blur(10px);">
+            <p class="mb-7 font-sans max-w-max px-3 py-1.5 text-sm text-white font-semibold uppercase ">SPORTS</p>
+            <h2 class="mb-4 text-5xl md:text-5xl text-white font-bold font-heading tracking-px-n leading-tight">How to handle your good employee for the business.</h2>
+        
+              <svg width="19" height="18" viewbox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 3.75L16.25 9M16.25 9L11 14.25M16.25 9L2.75 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="py-15 bg-black bg-no-repeat bg-center bg-cover overflow-hidden mb-12" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKXFLE9U65XtF1BR2MuUjFY6II-NGbl9FRvA&s');">
+        <div class="container px-4 mx-auto">
+          <div class="w-80 h-96 px-5 pt-5 pb-9 md:max-w-xl bg-black bg-opacity-80 rounded-4xl" style="backdrop-filter: blur(10px);">
+            <p class="mb-7 font-sans max-w-max px-3 py-1.5 text-sm text-white font-semibold ">FASHION</p>
+            <h2 class="mb-4 text-5xl md:text-5xl text-white font-bold font-heading tracking-px-n leading-tight">How to handle your good employee for the business.</h2>
+            
+              <svg width="19" height="18" viewbox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M11 3.75L16.25 9M16.25 9L11 14.25M16.25 9L2.75 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+      <div class="flex justify-center">
+        <h1 class="font-bold text-5xl text-center my-16 border-2 bg-purple-600 h-32 py-6 w-80 font-mono ">Category Section    
+        </h1>
+      </div>
+     
+    <section>
+        <!-- Labels / tags -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Tags</h4>
+    </div>
+    <div class="w3-container w3-white">
+    <p><span class="w3-tag w3-black w3-margin-bottom">Travel</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">New York</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">London</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">IKEA</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">NORWAY</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">DIY</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Ideas</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Baby</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Family</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">News</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Clothing</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Shopping</span>
+      <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Sports</span> <span class="w3-tag w3-light-grey w3-small w3-margin-bottom">Games</span>
+    </p>
+    </div>
+  </div>
+    </section>
+    <section>
+         <!-- Posts -->
+  <div class="w3-card w3-margin">
+    <div class="w3-container w3-padding">
+      <h4>Recent Posts</h4>
+    </div>
+    <ul class="w3-ul w3-hoverable w3-white">
+      <li class="w3-padding-16">
+        <img src="https://c8.alamy.com/compfr/cnyk1x/le-mot-news-en-3d-lettres-sur-fond-blanc-das-wort-news-aus-3d-buchstaben-freigestellt-gesetzt-auf-weissem-hintergrund-cnyk1x.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">NEWS</span><br>
+     
+      </li>
+      <li class="w3-padding-16">
+        <img src="https://cdn.educba.com/academy/wp-content/uploads/2023/01/Advantages-and-Disadvantages-of-Sports.jpg" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">SPORTS</span><br>
+        
+      </li> 
+      <li class="w3-padding-16">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhYYQt8hx-T360gjbRFJv8F60N6F2WAkJooRVM3tnEyTX381Nhe-fXRk18tZ2FqAC-FA&usqp=CAU" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+        <span class="w3-large">FASHION</span><br>
+     
+      </li>   
+    </ul>
+  </div>
+    </section>
+    <section class="relative py-20 md:py-24 overflow-hidden">
+        <div class="relative container px-4 mx-auto">
+          <div class="relative max-w-7xl mx-auto px-8 pt-16 pb-18 md:pb-24 bg-gray-900 rounded-4xl overflow-hidden">
+            <img class="absolute top-0 left-0 w-full h-full" src="https://shuffle.dev/saturn-assets/images/newsletter/bg-gradient-medium.png" alt="">
+            <div class="relative max-w-md mx-auto">
+              <h4 class="font-heading text-center text-4xl sm:text-5xl text-gray-50 font-semibold mb-12">Sign up </h4>
+              <div class="sm:flex mb-2 items-center">
+                <input class="w-full mb-3 sm:mb-0 sm:mr-4 py-3 px-4 text-sm text-gray-900 placeholder-gray-400 border border-gray-200 focus:border-purple-500 focus:outline-purple rounded-lg" type="email" placeholder="pat@saturn.dev">
+                <button class="relative group inline-block flex-shrink-0 w-full sm:w-auto py-3 px-5 text-sm font-semibold text-orange-50 bg-blue-900 rounded-md overflow-hidden" type="submit">
+                  <div class="absolute top-0 right-full w-full h-full bg-gray-900 transform group-hover:translate-x-full group-hover:scale-102 transition duration-500"></div>
+                  <div class="relative flex items-center justify-center">
+                    <span class="mr-4">Subscribe</span>
+                    <svg width="8" height="11" viewbox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M6.82994 5.04001L2.58994 0.80001C2.49698 0.706281 2.38638 0.631887 2.26452 0.581118C2.14266 0.530349 2.01195 0.504211 1.87994 0.504211C1.74793 0.504211 1.61723 0.530349 1.49537 0.581118C1.37351 0.631887 1.26291 0.706281 1.16994 0.80001C0.983692 0.987372 0.87915 1.24082 0.87915 1.50501C0.87915 1.7692 0.983692 2.02265 1.16994 2.21001L4.70994 5.75001L1.16994 9.29001C0.983692 9.47737 0.87915 9.73082 0.87915 9.99501C0.87915 10.2592 0.983692 10.5126 1.16994 10.7C1.26338 10.7927 1.3742 10.866 1.49604 10.9158C1.61787 10.9655 1.74834 10.9908 1.87994 10.99C2.01155 10.9908 2.14201 10.9655 2.26385 10.9158C2.38569 10.866 2.4965 10.7927 2.58994 10.7L6.82994 6.46001C6.92367 6.36705 6.99806 6.25645 7.04883 6.13459C7.0996 6.01273 7.12574 5.88202 7.12574 5.75001C7.12574 5.618 7.0996 5.48729 7.04883 5.36543C6.99806 5.24357 6.92367 5.13297 6.82994 5.04001Z" fill="currentColor"></path>
+                    </svg>
+                  </div>
+                </button>
+              </div>
+              <span class="block text-xs font-semibold text-gray-200">
+                <span>We care about your data in our</span>
+                <a class="inline-block underline text-white" href="#">privacy policy</a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 bg-gray-900">
+        <div class="container px-4 mx-auto">
+          <div class="max-w-7xl mx-auto">
+            <div class="pb-8 mb-15 border-b border-gray-700 items-center">
+              <div class="flex flex-wrap -mx-4 items-center">
+                <div class="w-full lg:w-1/2 px-4 mb-4 lg:mb-0">
+                  <a class="inline-block" href="#">
+                    <img class="h-15" src="saturn-assets/logos/logo-saturn-light.svg" alt="">
+                  </a>
+                </div>
+                <div class="w-full lg:w-1/2 px-4">
+                  <div class="sm:flex -mb-4 items-center lg:justify-end">
+                    <span class="inline-block text-white mb-4 mr-8">Ready to get collaborate?</span>
+                    <a class="relative group inline-block w-full sm:w-auto py-3 px-5 mb-4 text-center text-sm font-semibold text-orange-50 hover:text-orange-900 bg-orange-900 rounded-md overflow-hidden transition duration-300" href="#">
+                      <div class="absolute top-0 right-full w-full h-full bg-white transform group-hover:translate-x-full group-hover:scale-105 transition duration-500"></div>
+                      <span class="relative">Get Started</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap -mb-5 lg:-mx-6 items-center justify-center">
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Product</a></div>
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Features</a></div>
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Pricing</a></div>
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Resources</a></div>
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Careers</a></div>
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Help</a></div>
+              <div class="px-6 mb-5"><a class="inline-block text-gray-300 hover:text-gray-200" href="#">Privacy</a></div>
+            </div>
+            <div class="mt-15 text-center">
+              <span class="text-gray-500">© 2023 saturn. All rights reserved.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+</body>
+
+</html>
